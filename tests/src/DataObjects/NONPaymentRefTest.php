@@ -11,7 +11,7 @@ class NONPaymentRefTest extends BaseTestCase
     /**
      * @group unit
      */
-    public function testIfNONPaymentRefCanBeCreated(): void
+    public function testIfNonPaymentRefCanBeCreated(): void
     {
         $nonRef = NONPaymentRef::create('my reference');
         $this->assertInstanceOf(AbstractPaymentRef::class, $nonRef);

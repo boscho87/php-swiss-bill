@@ -7,6 +7,9 @@ use Boscho87\PhpSwissBillTest\BaseTestCase;
 
 class PaymentLevelInfoTest extends BaseTestCase
 {
+    /**
+     * @group unit
+     */
     public function testIfPaymentLevelInfoCanBeCreated(): void
     {
         $paymentLevelInfo = PaymentLevelInfo::create('CHF', 10);

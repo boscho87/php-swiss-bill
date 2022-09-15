@@ -11,7 +11,7 @@ class QQRPaymentRefTest extends BaseTestCase
     /**
      * @group unit
      */
-    public function testIfQQRPaymentRefCanBeCreated(): void
+    public function testIfQqrPaymentRefCanBeCreated(): void
     {
         $qqrPaymentInfo = QQRPaymentRef::create('ref');
         $this->assertInstanceOf(AbstractPaymentRef::class, $qqrPaymentInfo);

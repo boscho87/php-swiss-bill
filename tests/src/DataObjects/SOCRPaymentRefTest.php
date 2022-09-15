@@ -11,7 +11,7 @@ class SOCRPaymentRefTest extends BaseTestCase
     /**
      * @group unit
      */
-    public function testIfSOCRPaymentRefCanBeCreated(): void
+    public function testIfSocrPaymentRefCanBeCreated(): void
     {
         $socrPaymentRef = SOCRPaymentRef::create('ref');
         $this->assertInstanceOf(AbstractPaymentRef::class, $socrPaymentRef);
