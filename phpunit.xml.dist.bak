@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" bootstrap="vendor/autoload.php" colors="true" convertDeprecationsToExceptions="false" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd">
+  <php>
+    <env name="ENV" value="test"/>
+  </php>
+    <testsuite name="QRCode Bill Test Suite">
+      <directory>tests</directory>
+    </testsuite>
+    <filter>
+      <whitelist>
+        <directory>tests</directory>
+      </whitelist>
+    </filter>
+</phpunit>

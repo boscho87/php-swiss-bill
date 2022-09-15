@@ -1,0 +1,4 @@
+/vendor/
+/tools/php-cs-fixer/vendor
+.idea
+/test_doc/
