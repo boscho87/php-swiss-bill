@@ -8,7 +8,7 @@ class Header
     public const VERSION = '0200';
     public const CODING = '1';
 
-    public function __construct(
+    private function __construct(
         private readonly string $type,
         private readonly string $version,
         private readonly string $coding

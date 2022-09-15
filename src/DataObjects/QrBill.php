@@ -13,6 +13,8 @@ class QrBill
 
     public static function create(): self
     {
-        return new self(Header::createDefault());
+        return new self(
+            Header::createDefault()
+        );
     }
 }
