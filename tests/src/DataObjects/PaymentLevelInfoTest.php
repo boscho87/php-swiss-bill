@@ -10,6 +10,6 @@ class PaymentLevelInfoTest extends BaseTestCase
     public function testIfPaymentLevelInfoCanBeCreated(): void
     {
         $paymentLevelInfo = PaymentLevelInfo::create('CHF', 10);
-        $this->assertEquals(['todo'], $paymentLevelInfo);
+        $this->assertInstanceOf(PaymentLevelInfo::class, $paymentLevelInfo);
     }
 }

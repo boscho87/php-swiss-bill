@@ -13,6 +13,6 @@ class CreditorInfoTest extends BaseTestCase
     public function testIfCreditorInfoCanBeCreated(): void
     {
         $creditorInfo = CreditorInfo::create('iban');
-        $this->assertEquals(['todo'], $creditorInfo);
+        $this->assertInstanceOf(CreditorInfo::class, $creditorInfo);
     }
 }

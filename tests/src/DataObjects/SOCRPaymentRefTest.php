@@ -2,6 +2,7 @@
 
 namespace Boscho87\PhpSwissBillTest\src\DataObjects;
 
+use Boscho87\PhpSwissBill\DataObjects\AbstractPaymentRef;
 use Boscho87\PhpSwissBill\DataObjects\SOCRPaymentRef;
 use Boscho87\PhpSwissBillTest\BaseTestCase;
 
@@ -13,6 +14,7 @@ class SOCRPaymentRefTest extends BaseTestCase
     public function testIfSOCRPaymentRefCanBeCreated(): void
     {
         $socrPaymentRef = SOCRPaymentRef::create('ref');
-        $this->assertEquals(['todo'], $socrPaymentRef->getQrData());
+        $this->assertInstanceOf(AbstractPaymentRef::class, $socrPaymentRef);
+        $this->assertInstanceOf(SOCRPaymentRef::class, $socrPaymentRef);
     }
 }

@@ -2,6 +2,7 @@
 
 namespace Boscho87\PhpSwissBillTest\src\DataObjects;
 
+use Boscho87\PhpSwissBill\DataObjects\AbstractPaymentRef;
 use Boscho87\PhpSwissBill\DataObjects\NONPaymentRef;
 use Boscho87\PhpSwissBillTest\BaseTestCase;
 
@@ -13,6 +14,7 @@ class NONPaymentRefTest extends BaseTestCase
     public function testIfNONPaymentRefCanBeCreated(): void
     {
         $nonRef = NONPaymentRef::create('my reference');
-        $this->assertEquals(['todo'], $nonRef);
+        $this->assertInstanceOf(AbstractPaymentRef::class, $nonRef);
+        $this->assertInstanceOf(NONPaymentRef::class, $nonRef);
     }
 }

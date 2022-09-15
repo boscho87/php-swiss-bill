@@ -13,6 +13,6 @@ class AdditionalInfoTest extends BaseTestCase
     public function testIfAdditionalInfoCanBeCreated(): void
     {
         $info = AdditionalInfo::create('Message in a Bottle');
-        $this->assertEquals(['todo'], $info->getQrData());
+        $this->assertInstanceOf(AdditionalInfo::class, $info);
     }
 }
