@@ -24,6 +24,7 @@ class QrBill implements IQrCodeable
 
     public function getQrData(): array
     {
+        //Todo avoid a loop here!!
         foreach (get_object_vars($this) as $qrCodable) {
             $qrData[] = $qrCodable;
         }

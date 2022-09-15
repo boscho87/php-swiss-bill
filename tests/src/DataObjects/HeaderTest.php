@@ -13,6 +13,19 @@ class HeaderTest extends BaseTestCase
     public function testIfHeaderCanBeCreated(): void
     {
         $header = Header::createDefault();
-        $this->assertEquals(['todo'], $header->getQrData());
+        $this->assertInstanceOf(Header::class, $header);
+    }
+
+    /**
+     * @group unit
+     */
+    public function testIfDefaultHeaderHasExpectedQrData(): void
+    {
+        $header = Header::createDefault();
+        $this->assertEquals([
+            Header::QR_TYPE,
+            Header::VERSION,
+            Header::CODING,
+        ], $header->getQrData());
     }
 }

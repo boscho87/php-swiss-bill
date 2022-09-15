@@ -28,6 +28,25 @@ class Header implements IQrCodeable
 
     public function getQrData(): array
     {
-        // TODO: Implement getQrData() method.
+        return [
+            $this->getType(),
+            $this->getVersion(),
+            $this->getCoding(),
+        ];
+    }
+
+    public function getType(): string
+    {
+        return $this->type;
+    }
+
+    public function getVersion(): string
+    {
+        return $this->version;
+    }
+
+    public function getCoding(): string
+    {
+        return $this->coding;
     }
 }

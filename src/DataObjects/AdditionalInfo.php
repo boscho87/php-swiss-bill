@@ -6,6 +6,8 @@ use Boscho87\PhpSwissBill\QrCode\IQrCodeable;
 
 class AdditionalInfo implements IQrCodeable
 {
+    public const TRAILER = 'EPD';
+
     private function __construct(
         private ?string $message,
         private ?string $billInformation
@@ -19,6 +21,20 @@ class AdditionalInfo implements IQrCodeable
 
     public function getQrData(): array
     {
-        // TODO: Implement getQrData() method.
+        return array_values([
+            $this->getMessage(),
+            self::TRAILER,
+            $this->getBillInformation(),
+        ]);
+    }
+
+    public function getMessage(): ?string
+    {
+        return $this->message;
+    }
+
+    public function getBillInformation(): ?string
+    {
+        return $this->billInformation;
     }
 }
