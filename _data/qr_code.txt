@@ -27,5 +27,6 @@ Seldwyla
 CH
 NON
 
-Auftrag vom 12.09.2022
+Auftrag vom 15.09.2022
 EPD
+//S1/10/REchnungsnummer/11/220915/20/ReferenzKunden/30/102673386/31/220915220919/32/7.7:77/40/33:30
