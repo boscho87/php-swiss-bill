@@ -13,11 +13,11 @@
 - Encodinng of the QR Data
 - `1` = Latin
 
-[QRR][src/DataObjects/PaymentReference.php#8]
+[QRR][../src/DataObjects/QQRPaymentReference.php]
 - Orange Bills until 30.09.2022
 
-[SCOR][src/DataObjects/PaymentReference.php#9]
+[SCOR][src/DataObjects/SOCRPaymentReference.php]
 - New Type with QR Code
 
-[NON][src/DataObjects/PaymentReference.php#10]
+[NON][src/DataObjects/NONPaymentReference.php]
 - Rose Bills until 30.09.2022

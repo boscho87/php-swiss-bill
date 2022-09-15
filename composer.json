@@ -13,7 +13,8 @@
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "Boscho87\\PhpSwissBill\\": "src/"
+      "Boscho87\\PhpSwissBill\\": "src/",
+      "Boscho87\\PhpSwissBillTest\\": "tests/"
     }
   },
   "authors": [
