@@ -17,6 +17,9 @@
       "Boscho87\\PhpSwissBillTest\\": "tests/"
     }
   },
+  "scripts": {
+    "test": "vendor/bin/phpunit"
+  },
   "authors": [
     {
       "name": "Simon D. Müller",
