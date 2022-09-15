@@ -2,7 +2,9 @@
 
 namespace Boscho87\PhpSwissBill\DataObjects;
 
-class PaymentReference
+use Boscho87\PhpSwissBill\QrCode\IQrCodeable;
+
+class PaymentReference implements IQrCodeable
 {
     public const QQR = 'QRR';
     public const SCOR = 'SCOR';
@@ -33,5 +35,10 @@ class PaymentReference
     public static function createNON(?string $value): self
     {
         return self::create(self::NON, $value);
+    }
+
+    public function getQrData(): array
+    {
+        // TODO: Implement getQrData() method.
     }
 }

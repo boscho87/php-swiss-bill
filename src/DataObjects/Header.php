@@ -2,7 +2,9 @@
 
 namespace Boscho87\PhpSwissBill\DataObjects;
 
-class Header
+use Boscho87\PhpSwissBill\QrCode\IQrCodeable;
+
+class Header implements IQrCodeable
 {
     public const QR_TYPE = 'SCP';
     public const VERSION = '0200';
@@ -22,5 +24,10 @@ class Header
             self::VERSION,
             self::CODING
         );
+    }
+
+    public function getQrData(): array
+    {
+        // TODO: Implement getQrData() method.
     }
 }

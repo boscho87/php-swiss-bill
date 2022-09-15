@@ -2,7 +2,9 @@
 
 namespace Boscho87\PhpSwissBill\DataObjects;
 
-class PaymentLevelInfo
+use Boscho87\PhpSwissBill\QrCode\IQrCodeable;
+
+class PaymentLevelInfo implements IQrCodeable
 {
     private function __construct(
         private string $currency,
@@ -13,5 +15,10 @@ class PaymentLevelInfo
     public static function create(string $currency, ?float $amount = null): self
     {
         return new self($currency, $amount);
+    }
+
+    public function getQrData(): array
+    {
+        // TODO: Implement getQrData() method.
     }
 }

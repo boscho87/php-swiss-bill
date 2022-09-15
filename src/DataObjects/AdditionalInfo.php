@@ -2,10 +2,10 @@
 
 namespace Boscho87\PhpSwissBill\DataObjects;
 
-class AdditionalInfo
+use Boscho87\PhpSwissBill\QrCode\IQrCodeable;
+
+class AdditionalInfo implements IQrCodeable
 {
-
-
     private function __construct(
         private ?string $message,
         private ?string $billInformation
@@ -17,4 +17,8 @@ class AdditionalInfo
         return new self($message, $billInformation);
     }
 
+    public function getQrData(): array
+    {
+        // TODO: Implement getQrData() method.
+    }
 }
