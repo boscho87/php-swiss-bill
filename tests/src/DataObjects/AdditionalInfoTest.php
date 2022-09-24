@@ -15,4 +15,36 @@ class AdditionalInfoTest extends BaseTestCase
         $info = AdditionalInfo::create('Message in a Bottle');
         $this->assertInstanceOf(AdditionalInfo::class, $info);
     }
+
+    /**
+     * @group unit
+     * @dataProvider qrData
+     */
+    public function testGetQrData(
+        string $messageIn,
+        ?string $billInformation,
+        array $expected
+    ): void {
+        $info = AdditionalInfo::create(
+            $messageIn,
+            $billInformation
+        );
+
+        $this->assertSame($info->getQrData(), $expected);
+    }
+
+    public function qrData(): array
+    {
+        return [
+            [
+                'message',
+                'billinfo',
+                [
+                    'message',
+                    'EPD',
+                    'billinfo',
+                ],
+            ],
+        ];
+    }
 }

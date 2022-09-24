@@ -2,12 +2,16 @@
 
 namespace Boscho87\PhpSwissBill\DataObjects;
 
-use Boscho87\PhpSwissBill\QrCode\IQrCodeable;
 
-class Address implements IQrCodeable
+class Address extends AbstractDataElement
 {
     public function getQrData(): array
     {
         // TODO: Implement getQrData() method.
+    }
+
+    public function validate(): bool
+    {
+        // TODO: Implement validate() method.
     }
 }

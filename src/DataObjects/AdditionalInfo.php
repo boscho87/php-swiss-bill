@@ -2,15 +2,15 @@
 
 namespace Boscho87\PhpSwissBill\DataObjects;
 
-use Boscho87\PhpSwissBill\QrCode\IQrCodeable;
+use Boscho87\PhpSwissBill\DataValidation\Error;
 
-class AdditionalInfo implements IQrCodeable
+class AdditionalInfo extends AbstractDataElement
 {
     public const TRAILER = 'EPD';
 
     private function __construct(
-        private ?string $message,
-        private ?string $billInformation
+        private readonly ?string $message,
+        private readonly ?string $billInformation
     ) {
     }
 
@@ -36,5 +36,23 @@ class AdditionalInfo implements IQrCodeable
     public function getBillInformation(): ?string
     {
         return $this->billInformation;
+    }
+
+    public function validate(): bool
+    {
+        if (strlen($this->message) > 140) {
+            $this->errors[] = new Error(
+                'max 140 chars for additional info message',
+                self::class . 'message.too.long'
+            );
+        }
+
+        if (strlen($this->billInformation) > 140) {
+            $this->errors[] = new Error(
+                'max 140 chars for additional info billInformation' .
+                self::class . 'bill_information.too.long'
+            );
+        }
+        return empty($this->errors);
     }
 }

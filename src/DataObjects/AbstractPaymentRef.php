@@ -2,9 +2,7 @@
 
 namespace Boscho87\PhpSwissBill\DataObjects;
 
-use Boscho87\PhpSwissBill\QrCode\IQrCodeable;
-
-abstract class AbstractPaymentRef implements IQrCodeable
+abstract class AbstractPaymentRef extends AbstractDataElement
 {
     protected function __construct(
         protected ?string $value

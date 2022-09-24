@@ -2,9 +2,9 @@
 
 namespace Boscho87\PhpSwissBill\DataObjects;
 
-use Boscho87\PhpSwissBill\QrCode\IQrCodeable;
 
-class CreditorInfo implements IQrCodeable
+
+class CreditorInfo extends AbstractDataElement
 {
     public function __construct(
         private readonly string $iban
@@ -20,5 +20,10 @@ class CreditorInfo implements IQrCodeable
     public function getQrData(): array
     {
         // TODO: Implement getQrData() method.
+    }
+
+    public function validate(): bool
+    {
+        // TODO: Implement validate() method.
     }
 }

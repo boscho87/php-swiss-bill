@@ -7,8 +7,8 @@ use Boscho87\PhpSwissBill\QrCode\IQrCodeable;
 class PaymentLevelInfo implements IQrCodeable
 {
     private function __construct(
-        private string $currency,
-        private ?float $amount
+        private readonly string $currency,
+        private readonly ?float $amount
     ) {
     }
 
